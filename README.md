@@ -79,10 +79,6 @@ flowchart TD
 
 ---
 
-### 🔹 Load Balancing Proof (Multiple show-service Instances)
-
-![Load Balancing](screenshots/load-balancing-proof.png)
-
 ---
 
 ## 🧩 Microservices
