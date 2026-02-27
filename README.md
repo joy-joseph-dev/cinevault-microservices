@@ -63,6 +63,27 @@ flowchart TD
 
     Booking -->|Feign Call<br/>Seat Validation & Pricing| Show
 ```
+---
+
+## 📸 System Proof Screenshots
+
+### 🔹 Eureka Dashboard (All Services Registered)
+
+![Eureka Dashboard](screenshots/eureka-dashboard.png)
+
+---
+
+### 🔹 API Gateway Routing via Postman
+
+![Gateway Routing](screenshots/gateway-routing.png)
+
+---
+
+### 🔹 Load Balancing Proof (Multiple show-service Instances)
+
+![Load Balancing](screenshots/load-balancing-proof.png)
+
+---
 
 ## 🧩 Microservices
 
