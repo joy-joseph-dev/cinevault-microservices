@@ -45,9 +45,12 @@ CineVault is a multi-module microservices system:
 
 ---
 
-🏗 Architecture Diagram
+## 🏗 Architecture Diagram
 
+```mermaid
 flowchart TD
+...
+```
 
     Client[Client<br/>Browser / Postman]
 
@@ -133,27 +136,22 @@ Movies → Shows → Seats → Booking
 
 ---
 
-🎥 Frontend Screenshots
+## 📸 Frontend Screenshots
 
-🎬 Movies Page
+### 🎬 Movies Page
+![Movies](screenshots/movies.png)
 
-"Movies" (screenshots/movies.png)
+### 🎭 Shows Page
+![Shows](screenshots/shows.png)
 
-🎭 Shows Page
+### 💺 Seat Selection
+![Seats](screenshots/seats.png)
 
-"Shows" (screenshots/shows.png)
+### ✅ Booking Success
+![Booking Success](screenshots/success_msg.png)
 
-💺 Seat Selection
-
-"Seats" (screenshots/seats.png)
-
-✅ Booking Success (Valid Selection)
-
-"Booking Success" (screenshots/success_msg.png)
-
-⚠️ Validation Error (No Seats Selected)
-
-"Validation Error" (screenshots/alert_msg.png)
+### ⚠️ Validation Error
+![Validation Error](screenshots/alert_msg.png)
 
 👉 These screenshots demonstrate complete end-to-end booking flow including success and validation handling.
 
