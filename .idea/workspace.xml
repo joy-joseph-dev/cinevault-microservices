@@ -5,18 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="44e5583c-9945-4699-89db-b0b19f33069d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/api-gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/com/cinevault/apigateway/ApiGatewayApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/cinevault/apigateway/ApiGatewayApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/booking-service/src/main/java/com/cinevault/bookingservice/Controller/AnalyticsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/booking-service/src/main/java/com/cinevault/bookingservice/Controller/AnalyticsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/booking-service/src/main/java/com/cinevault/bookingservice/Controller/BookingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/booking-service/src/main/java/com/cinevault/bookingservice/Controller/BookingController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/movie-service/src/main/java/com/cinevault/movieservice/Controller/MovieController.java" beforeDir="false" afterPath="$PROJECT_DIR$/movie-service/src/main/java/com/cinevault/movieservice/Controller/MovieController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/movie-service/src/main/java/com/cinevault/movieservice/Service/MovieService.java" beforeDir="false" afterPath="$PROJECT_DIR$/movie-service/src/main/java/com/cinevault/movieservice/Service/MovieService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/movie-service/src/main/java/com/cinevault/movieservice/dto/MovieRequestDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/movie-service/src/main/java/com/cinevault/movieservice/dto/MovieRequestDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/movie-service/src/main/java/com/cinevault/movieservice/dto/MovieResponseDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/movie-service/src/main/java/com/cinevault/movieservice/dto/MovieResponseDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/movie-service/src/main/java/com/cinevault/movieservice/entity/Movie.java" beforeDir="false" afterPath="$PROJECT_DIR$/movie-service/src/main/java/com/cinevault/movieservice/entity/Movie.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/show-service/src/main/java/com/cinevault/showservice/Controller/SeatController.java" beforeDir="false" afterPath="$PROJECT_DIR$/show-service/src/main/java/com/cinevault/showservice/Controller/SeatController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/show-service/src/main/java/com/cinevault/showservice/Controller/ShowController.java" beforeDir="false" afterPath="$PROJECT_DIR$/show-service/src/main/java/com/cinevault/showservice/Controller/ShowController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/cinevault/userservice/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/cinevault/userservice/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
