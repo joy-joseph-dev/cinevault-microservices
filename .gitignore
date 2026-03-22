@@ -12,7 +12,7 @@ frontend/node_modules/
 *.iws
 *.iml
 *.ipr
-
+.idea/frontend/node_modules/
 ### Eclipse ###
 .apt_generated
 .classpath
