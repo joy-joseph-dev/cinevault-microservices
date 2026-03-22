@@ -1,26 +1,56 @@
-# 🎬 CineVault – Distributed Dynamic Movie Ticket Booking System
+🎬 CineVault – Distributed Full Stack Movie Ticket Booking System
 
-A production-style microservices architecture implementing distributed seat booking, dynamic pricing engine, service discovery, API gateway, and client-side load balancing using Spring Boot and Spring Cloud.
+A production-style full stack microservices application that simulates a real-world movie ticket booking platform using Spring Boot + React.
+
+It demonstrates distributed system design, API Gateway routing, service discovery, and end-to-end booking flow from UI to database.
 
 ---
 
-## 🏗 Architecture Overview
+🚀 Overview
 
-CineVault is a multi-module Maven microservices project built using:
+CineVault is designed as a scalable, loosely coupled system where each service operates independently and communicates via REST APIs.
 
+The system includes:
+
+- Backend: Spring Boot Microservices
+- Frontend: React (UI for booking flow)
+- Communication: API Gateway + Feign
+- Service Discovery: Eureka
+- Database: MySQL (per service)
+
+---
+
+🧠 Tech Stack
+
+Backend
+
+- Java
 - Spring Boot
-- Spring Cloud Eureka (Service Discovery)
-- Spring Cloud Gateway (Routing Layer)
-- OpenFeign (Inter-service Communication)
-- Spring Cloud LoadBalancer (Round-Robin)
-- MySQL (Database per Service)
+- Spring Cloud (Eureka, Gateway)
+- OpenFeign
+- MySQL
 
-Each microservice runs independently and owns its own database.
+Frontend
+
+- React (Functional Components)
+- JavaScript (ES6)
+- HTML5, CSS3
 
 ---
-## 🏗 Architecture Diagram
 
-```mermaid
+🏗 Architecture Overview
+
+CineVault follows a microservices architecture:
+
+- API Gateway for centralized routing
+- Eureka Server for service discovery
+- Independent services with their own databases
+- Feign clients for inter-service communication
+
+---
+
+🏗 Architecture Diagram
+
 flowchart TD
 
     Client[Client<br/>Browser / Postman]
@@ -62,110 +92,162 @@ flowchart TD
     Theatre -.-> Eureka
 
     Booking -->|Feign Call<br/>Seat Validation & Pricing| Show
-```
----
-
-## 📸 System Proof Screenshots
-
-### 🔹 Eureka Dashboard (All Services Registered)
-
-![Eureka Dashboard](screenshots/eureka-dashboard.png)
 
 ---
 
-### 🔹 API Gateway Routing via Postman
+📌 Architecture Explanation
 
-![Gateway Routing](screenshots/gateway-routing.png)
-
-## 📸 Screenshots
-
-### 🎬 Movies Page
-![Movies](screenshots/movies.png)
-
-### 🎭 Shows Page
-![Shows](screenshots/shows.png)
-
-### 💺 Seats Selection
-![Seats](screenshots/seats.png)
-
-### ✅ Booking Flow
-![Booking](screenshots/alert_msg.png)
-
-### 🏗️ Architecture
-![Architecture](screenshots/success_msg.png)
+- All requests go through API Gateway (single entry point)
+- Services dynamically discovered using Eureka
+- Each service owns its database (Database per Service pattern)
+- booking-service validates seats using show-service via Feign
+- Designed for scalability and loose coupling
 
 ---
 
+🖥️ Frontend (React Integration)
+
+A lightweight React frontend demonstrates the complete booking flow.
+
+Features
+
+- Fetch movies from backend
+- View shows by movie
+- Seat selection UI (Available / Booked)
+- Booking integration with backend APIs
+- Uses API Gateway for all requests
+
+🔄 Flow
+
+Movies → Shows → Seats → Booking
+
 ---
 
-## 🧩 Microservices
+📸 System Proof Screenshots
 
-| Service | Responsibility | Database |
-|----------|---------------|-----------|
-| movie-service | Manage movies | movie_db |
-| show-service | Manage shows & seats | show_db |
-| booking-service | Booking logic & pricing engine | booking_db |
-| user-service | Manage users | user_db |
-| theatre-service | Manage theatres & screens | theatre_db |
-| api-gateway | Centralized routing | — |
-| eureka-server | Service registry | — |
+🔹 Eureka Dashboard (All Services Registered)
+
+"Eureka" (screenshots/eureka-dashboard.png)
+
+🔹 API Gateway Routing via Postman
+
+"Gateway" (screenshots/gateway-routing.png)
 
 ---
 
-## 🚀 Key Features
+🎥 Frontend Screenshots
 
-### 🔹 Business Features
+🎬 Movies Page
+
+"Movies" (screenshots/movies.png)
+
+🎭 Shows Page
+
+"Shows" (screenshots/shows.png)
+
+💺 Seat Selection
+
+"Seats" (screenshots/seats.png)
+
+✅ Booking Success (Valid Selection)
+
+"Booking Success" (screenshots/success_msg.png)
+
+⚠️ Validation Error (No Seats Selected)
+
+"Validation Error" (screenshots/alert_msg.png)
+
+👉 These screenshots demonstrate the complete end-to-end booking flow from UI to microservices backend, including both success and validation scenarios.
+
+---
+
+🧩 Microservices
+
+Service| Responsibility| Database
+movie-service| Manage movies| movie_db
+show-service| Manage shows & seats| show_db
+booking-service| Booking logic & pricing| booking_db
+user-service| Manage users| user_db
+theatre-service| Manage theatres| theatre_db
+api-gateway| Routing layer| —
+eureka-server| Service registry| —
+
+---
+
+🚀 Key Features
+
+🔹 Business Logic
+
 - Seat-level booking
 - Double booking prevention
 - Dynamic pricing engine
-- Weekend multiplier (+20%)
+- Weekend surge pricing (+20%)
 - Morning discount (-10%)
-- VIP & Premium seat category pricing
-- Revenue calculation logic
+- VIP/Premium seat pricing
 
-### 🔹 Engineering Features
-- Database-per-service design
-- Service discovery via Eureka
+🔹 Engineering Highlights
+
+- Microservices architecture
+- Database-per-service pattern
 - API Gateway routing
-- Feign-based inter-service communication
+- Feign communication
 - Client-side load balancing
 - Centralized exception handling
 
 ---
 
-## 🔄 Booking Flow (Distributed)
+🔄 Booking Flow (Distributed)
 
-1. Booking request received via API Gateway  
-2. booking-service calls show-service via Feign  
-3. Seat availability validated  
-4. Dynamic pricing rules applied  
-5. Seats marked as booked  
-6. Booking persisted in booking database  
-
----
-
-## 🆚 Monolith vs Microservices
-
-| Monolith | Microservices |
-|------------|----------------|
-| Single codebase | Multiple independent services |
-| Shared database | Database per service |
-| Direct method calls | REST + Feign communication |
-| No service discovery | Eureka-based discovery |
-| No load balancing | Client-side load balancing |
-| Hard to scale selectively | Individual service scaling |
+1. Request hits API Gateway
+2. booking-service calls show-service via Feign
+3. Seat availability validated
+4. Dynamic pricing applied
+5. Seats marked as booked
+6. Booking stored in database
 
 ---
 
-## ⚙ How to Run
+🆚 Monolith vs Microservices
 
-1. Start eureka-server  
-2. Start all microservices  
-3. Start api-gateway  
-4. Access endpoints via:
-   - http://localhost:8080/movie-service/movies
-   - http://localhost:8080/booking-service/bookings
+Monolith| Microservices
+Single codebase| Multiple independent services
+Shared database| Database per service
+Direct method calls| REST + Feign communication
+No service discovery| Eureka-based discovery
+Hard to scale selectively| Individual service scaling
 
 ---
 
-📌 This project is the distributed evolution of the original CineVault monolithic booking system.
+⚙️ How to Run Locally
+
+1. Start eureka-server
+2. Start all microservices
+3. Start api-gateway
+4. Run frontend:
+
+cd frontend
+npm install
+npm start
+
+---
+
+💡 Key Learnings
+
+- Built scalable distributed system using Spring Boot
+- Implemented API Gateway & service discovery
+- Designed real-world booking workflow
+- Integrated React frontend with microservices backend
+- Applied production-level architecture patterns
+
+---
+
+📌 Future Enhancements
+
+- JWT Authentication
+- Payment integration
+- React Router navigation
+- Docker & Kubernetes deployment
+
+---
+
+🚀 This project demonstrates fullstack capability, distributed system design, and real-world backend architecture.
