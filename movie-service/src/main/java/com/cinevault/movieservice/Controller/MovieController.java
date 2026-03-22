@@ -6,7 +6,7 @@ import com.cinevault.movieservice.dto.MovieResponseDTO;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-
+//@CrossOrigin
 @RestController
 @RequestMapping("/movies")
 public class MovieController {

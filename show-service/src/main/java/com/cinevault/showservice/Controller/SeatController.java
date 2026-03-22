@@ -4,7 +4,7 @@ import com.cinevault.showservice.Entity.Seat;
 import com.cinevault.showservice.Service.SeatService;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
-
+//@CrossOrigin
 @RestController
 @RequestMapping("/seats")
 public class SeatController {

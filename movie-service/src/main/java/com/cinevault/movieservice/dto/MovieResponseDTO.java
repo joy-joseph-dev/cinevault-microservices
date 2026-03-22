@@ -14,5 +14,6 @@ public class MovieResponseDTO {
     private final String language;
     private final LocalDate releaseDate;
     private final String genre;
+    private String imageUrl;
 
 }

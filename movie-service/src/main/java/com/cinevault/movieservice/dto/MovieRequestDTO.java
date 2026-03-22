@@ -15,4 +15,5 @@ public class MovieRequestDTO {
     private String language;
     private LocalDate releaseDate;
     private String genre;
+    private String imageUrl;
 }

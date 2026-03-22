@@ -4,12 +4,11 @@ import com.cinevault.bookingservice.DTO.BookingRequestDTO;
 import com.cinevault.bookingservice.DTO.BookingResponseDTO;
 import com.cinevault.bookingservice.Entity.Booking;
 import com.cinevault.bookingservice.Service.BookingService;
-import org.apache.catalina.User;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-
-@RestController
+//@CrossOrigin(origins = "http://localhost:3000")
+//@RestController
 @RequestMapping("/bookings")
 public class BookingController {
 

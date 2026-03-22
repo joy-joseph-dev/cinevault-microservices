@@ -34,6 +34,7 @@ public class MovieService {
         movie.setReleaseDate(dto.getReleaseDate());
         movie.setCreatedAt(LocalDate.now());
         movie.setGenre(dto.getGenre());
+        movie.setImageUrl(dto.getImageUrl());
 
         Movie saved = movieRepository.save(movie);
 
@@ -51,6 +52,7 @@ public class MovieService {
         movie.setLanguage(dto.getLanguage());
         movie.setReleaseDate(dto.getReleaseDate());
         movie.setGenre(dto.getGenre());
+        movie.setImageUrl(dto.getImageUrl());
 
         Movie updated = movieRepository.save(movie);
 
@@ -83,7 +85,8 @@ public class MovieService {
                 movie.getDuration(),
                 movie.getLanguage(),
                 movie.getReleaseDate(),
-                movie.getGenre()
+                movie.getGenre(),
+                movie.getImageUrl()
         );
     }
 }

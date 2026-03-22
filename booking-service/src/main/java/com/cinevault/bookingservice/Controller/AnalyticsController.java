@@ -2,7 +2,7 @@ package com.cinevault.bookingservice.Controller;
 import com.cinevault.bookingservice.Service.AnalyticsService;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
-
+@CrossOrigin
 @RestController
 @RequestMapping("/analytics")
 public class AnalyticsController {

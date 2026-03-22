@@ -22,5 +22,6 @@ public class Movie {
     private LocalDate releaseDate;
     private LocalDate createdAt;
     private String genre;
+    private String imageUrl;
 
 }

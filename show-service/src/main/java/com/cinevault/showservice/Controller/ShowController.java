@@ -4,7 +4,7 @@ import com.cinevault.showservice.Entity.Show;
 import com.cinevault.showservice.Service.ShowService;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
-
+//@CrossOrigin
 @RestController
 @RequestMapping("/shows")
 public class ShowController {
