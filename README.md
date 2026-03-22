@@ -77,6 +77,23 @@ flowchart TD
 
 ![Gateway Routing](screenshots/gateway-routing.png)
 
+## 📸 Screenshots
+
+### 🎬 Movies Page
+![Movies](screenshots/movies.png)
+
+### 🎭 Shows Page
+![Shows](screenshots/shows.png)
+
+### 💺 Seats Selection
+![Seats](screenshots/seats.png)
+
+### ✅ Booking Flow
+![Booking](screenshots/alert_msg.png)
+
+### 🏗️ Architecture
+![Architecture](screenshots/success_msg.png)
+
 ---
 
 ---
